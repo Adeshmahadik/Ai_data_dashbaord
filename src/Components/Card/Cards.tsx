@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { ReactNode } from 'react';
 
-const Cards = () => {
-  return (
-    <div>Cards</div>
-  )
+interface CardsProps {
+  children: ReactNode;
 }
 
-export default Cards
+const Cards: React.FC<CardsProps> = ({ children }) => {
+  return (
+    <div className="card_container w-full h-full">{children}</div>
+  );
+}
+
+export default Cards;
